@@ -442,3 +442,301 @@ label {
 .category-grid h3 {
   font-size: 14px;
 }
+/* =========================================================
+   9. POPULAR EQUIPMENT
+========================================================= */
+
+.popular {
+  padding-bottom: 90px;
+}
+
+.popular > h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.equipment-card {
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: 0.25s ease;
+}
+
+.equipment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.equipment-card img {
+  height: 220px;
+}
+
+.equipment-card h3,
+.equipment-card > span,
+.equipment-card > p,
+.equipment-card > strong,
+.equipment-card > a {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.equipment-card h3 {
+  margin-top: 17px;
+  font-size: 18px;
+}
+
+.equipment-card > span {
+  display: inline-block;
+  margin-top: 5px;
+
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.equipment-card > p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.equipment-card > strong {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--dark);
+  font-size: 17px;
+}
+
+.equipment-card > a {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   10. RENTAL PLANS
+========================================================= */
+
+.rental-plans {
+  padding: 80px 4%;
+
+  width: 100%;
+
+  background: var(--primary-light);
+}
+
+.rental-plans > h2 {
+  width: min(1200px, 92%);
+  margin: 0 auto 35px;
+
+  font-size: 34px;
+}
+
+.plans {
+  width: min(1200px, 92%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.plan {
+  position: relative;
+
+  padding: 30px;
+
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.plan h3 {
+  margin-bottom: 12px;
+}
+
+.plan h2 {
+  font-size: 25px;
+  color: var(--primary);
+}
+
+.plan p {
+  color: var(--muted);
+  margin: 10px 0 20px;
+}
+
+.plan button {
+  padding: 11px 18px;
+
+  background: var(--primary);
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+}
+
+.plan.best {
+  border: 2px solid var(--secondary);
+}
+
+.plan.best h3 {
+  color: var(--secondary-dark);
+}
+
+/* =========================================================
+   11. HOW IT WORKS
+========================================================= */
+
+.how-it-works {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.how-it-works > h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 45px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.steps > div {
+  text-align: center;
+  padding: 30px;
+}
+
+.step-number {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 18px;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.steps h3 {
+  margin-bottom: 8px;
+}
+
+.steps p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* =========================================================
+   12. CTA
+========================================================= */
+
+.cta {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 30px auto 90px;
+
+  padding: 60px;
+
+  text-align: center;
+
+  background: var(--dark);
+  color: white;
+
+  border-radius: 25px;
+}
+
+.cta h2 {
+  color: white;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: #c7d1c9;
+  margin-bottom: 25px;
+}
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
+
+.footer {
+  width: 100%;
+
+  padding: 60px 5% 25px;
+
+  background: #111b14;
+  color: #d8e2da;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer h3 {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #9eaaa1;
+  font-size: 13px;
+}
+
+.footer a {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #aeb9b1;
+  font-size: 13px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+
+  margin: 40px auto 0;
+  padding-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid #2c382f;
+}
