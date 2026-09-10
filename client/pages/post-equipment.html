@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>List Equipment | AgriHire</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="../index.html" class="logo">
+        🚜 AgriHire
+    </a>
+
+    <a href="owner-dashboard.html">
+        ← Owner Dashboard
+    </a>
+
+</header>
+
+
+<main class="form-page">
+
+    <div class="form-container">
+
+        <h1>
+            List Your Equipment
+        </h1>
+
+        <p>
+            Rent out your agricultural equipment to farmers nearby.
+        </p>
+
+
+        <form>
+
+
+            <div class="form-group">
+
+                <label>
+                    Equipment Category
+                </label>
+
+                <select required>
+
+                    <option>
+                        Select Category
+                    </option>
+
+                    <option>Tractor</option>
+                    <option>Harrow</option>
+                    <option>Cultivator</option>
+                    <option>Rotavator</option>
+                    <option>Seed Drill</option>
+                    <option>Plough</option>
+                    <option>Bund Former</option>
+                    <option>Digger</option>
+                    <option>Sprayer</option>
+                    <option>Thresher</option>
+                    <option>Harvester</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Equipment Name
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="e.g. John Deere 5310"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Model
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Model number"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    rows="5"
+                    placeholder="Describe your equipment..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Village / City / District"
+                    required
+                >
+
+            </div>
+
+
+            <h2>
+                Rental Pricing
+            </h2>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Hourly Price
+                    </label>
+
+                    <input
+                        type="number"
+                        placeholder="₹ per hour"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Daily Price
+                    </label>
+
+                    <input
+                        type="number"
+                        placeholder="₹ per day"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Weekly Price
+                    </label>
+
+                    <input
+                        type="number"
+                        placeholder="₹ per week"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        10-Day Package
+                    </label>
+
+                    <input
+                        type="number"
+                        placeholder="₹"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Special Offer
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="e.g. 10L Diesel Free"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Equipment Image
+                </label>
+
+                <input
+                    type="file"
+                    accept="image/*"
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn"
+            >
+                Publish Equipment
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+</html>
