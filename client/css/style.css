@@ -740,3 +740,137 @@ label {
 
   border-top: 1px solid #2c382f;
 }
+
+/* =========================================================
+   14. AUTH PAGES
+========================================================= */
+
+.auth-page {
+  min-height: calc(100vh - 76px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20px;
+}
+
+.auth-card,
+.signup-card {
+  width: 100%;
+  max-width: 470px;
+
+  padding: 40px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow);
+}
+
+.signup-card {
+  max-width: 650px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header h1 {
+  font-size: 30px;
+}
+
+.auth-header p,
+.signup-card > p {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 15px 0 20px;
+
+  font-size: 12px;
+}
+
+.form-options label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.form-options input {
+  width: auto;
+}
+
+.form-options a {
+  color: var(--primary);
+}
+
+.auth-divider {
+  margin: 25px 0;
+
+  display: flex;
+  justify-content: center;
+
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.auth-footer {
+  text-align: center;
+
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.auth-footer a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.role-options {
+  display: flex;
+  gap: 15px;
+}
+
+.role-options label {
+  flex: 1;
+
+  padding: 13px;
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  cursor: pointer;
+}
+
+.role-options input {
+  width: auto;
+  margin-right: 6px;
+}
+
+.terms {
+  display: flex;
+  gap: 8px;
+
+  margin: 20px 0;
+
+  font-size: 12px;
+}
+
+.terms input {
+  width: auto;
+}
