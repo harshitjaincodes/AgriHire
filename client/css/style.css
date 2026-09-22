@@ -874,3 +874,36 @@ label {
 .terms input {
   width: auto;
 }
+
+/* =========================================================
+   15. FORM PAGES
+========================================================= */
+
+.form-page {
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+
+.form-container {
+  max-width: 750px;
+  margin: auto;
+  padding: 40px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.form-container > h1 {
+  margin-bottom: 8px;
+}
+
+.form-container > p {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.form-container h2 {
+  margin: 30px 0 20px;
+  font-size: 20px;
+}
