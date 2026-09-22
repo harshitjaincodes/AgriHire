@@ -907,3 +907,296 @@ label {
   margin: 30px 0 20px;
   font-size: 20px;
 }
+/* =========================================================
+   16. EQUIPMENT PAGE
+========================================================= */
+
+.equipment-page-header {
+  padding-top: 65px;
+  padding-bottom: 35px;
+}
+
+.equipment-page-header h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.equipment-page-header p:last-child {
+  color: var(--muted);
+}
+
+/* SEARCH BOX */
+
+.equipment-search-box {
+  padding: 25px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.equipment-search-box form {
+  display: grid;
+
+  grid-template-columns: 1.2fr 1.3fr 1fr auto;
+
+  gap: 15px;
+  align-items: end;
+}
+
+.search-field label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+/* EQUIPMENT CONTENT */
+
+.equipment-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+
+  gap: 30px;
+
+  padding-top: 45px;
+  padding-bottom: 80px;
+}
+
+/* FILTERS */
+
+.equipment-filters {
+  padding: 22px;
+
+  height: fit-content;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  position: sticky;
+  top: 100px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-header h2 {
+  font-size: 19px;
+}
+
+.filter-header button {
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-size: 12px;
+}
+
+.filter-group {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-group:last-child {
+  border-bottom: none;
+}
+
+.filter-group h3 {
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 10px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+  width: auto;
+}
+
+/* RESULTS */
+
+.results-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.results-top h2 {
+  font-size: 24px;
+}
+
+.results-top p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.sort-select {
+  width: 210px;
+}
+
+/* EQUIPMENT CARD - FINAL PAGE */
+
+.equipment-results .equipment-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.equipment-card-image {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+
+.equipment-card-image img {
+  height: 100%;
+}
+
+.wishlist-btn {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  font-size: 21px;
+}
+
+.available-badge {
+  position: absolute;
+
+  left: 12px;
+  bottom: 12px;
+
+  padding: 5px 10px;
+
+  background: #e7f7ea;
+  color: var(--success);
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.equipment-card-content {
+  padding: 20px;
+}
+
+.equipment-card-content .equipment-category {
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.equipment-card-content h3 {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.rating {
+  margin-top: 8px;
+
+  color: #d99716;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rating span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  margin-top: 12px;
+}
+
+.price strong {
+  font-size: 16px;
+}
+
+.price span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.location,
+.operator {
+  margin-top: 9px;
+
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.operator {
+  color: var(--success);
+}
+
+.equipment-card-content .btn {
+  margin-top: 15px;
+}
+
+/* PAGINATION */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 45px;
+}
+
+.pagination button {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid var(--border);
+  background: var(--white);
+
+  border-radius: 8px;
+}
+
+.pagination button.active,
+.pagination button:hover {
+  background: var(--primary);
+  color: white;
+}
