@@ -1200,3 +1200,363 @@ label {
   background: var(--primary);
   color: white;
 }
+/* =========================================================
+   17. EQUIPMENT DETAILS
+========================================================= */
+
+.equipment-details {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 55px 0 90px;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  column-gap: 40px;
+  row-gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   EQUIPMENT GALLERY
+========================= */
+
+.equipment-gallery {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.equipment-gallery > img {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+  object-fit: contain;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  padding: 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   THUMBNAILS
+========================= */
+
+.thumbnail-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+.thumbnail-row img {
+  width: 90px;
+  height: 80px;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  padding: 5px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.thumbnail-row img:hover {
+  border-color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   EQUIPMENT INFORMATION
+========================= */
+
+.equipment-info {
+  width: 100%;
+
+  grid-column: 2;
+  grid-row: 1;
+
+  padding: 5px 0;
+}
+
+.equipment-tag {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  background: var(--primary-light);
+
+  color: var(--primary);
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.equipment-info h1 {
+  margin: 12px 0 8px;
+
+  font-size: 38px;
+
+  line-height: 1.2;
+
+  color: var(--dark);
+}
+
+.equipment-info > p {
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+.equipment-info > hr {
+  margin: 18px 0;
+
+  border: none;
+
+  border-top: 1px solid var(--border);
+}
+
+.equipment-info h2 {
+  margin-bottom: 14px;
+
+  font-size: 22px;
+}
+
+
+/* =========================
+   SPECIFICATIONS
+========================= */
+
+.specifications {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  border-top: 1px solid var(--border);
+}
+
+.specifications li {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+.specifications li strong {
+  color: var(--dark);
+}
+
+
+/* =========================
+   RENTAL OPTIONS
+========================= */
+
+.rental-options {
+  width: 100%;
+
+  grid-column: 2;
+  grid-row: 2;
+
+  padding: 22px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-sm);
+
+  box-sizing: border-box;
+}
+
+.rental-options h2 {
+  margin: 0 0 15px;
+
+  font-size: 21px;
+}
+
+
+/* =========================
+   RENTAL OPTION
+========================= */
+
+.rental-option {
+  padding: 14px;
+
+  margin-bottom: 10px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  transition: 0.2s ease;
+}
+
+.rental-option:hover {
+  border-color: var(--primary);
+
+  transform: translateY(-1px);
+}
+
+.rental-option h3 {
+  margin-bottom: 4px;
+
+  font-size: 14px;
+}
+
+.rental-option strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--primary);
+
+  font-size: 17px;
+}
+
+.rental-option p {
+  margin-top: 4px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.rental-option.best {
+  border: 2px solid var(--secondary);
+
+  background: #fffaf0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.rental-options .btn {
+  margin-top: 5px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .equipment-details {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .equipment-gallery {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .equipment-info {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .rental-options {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .equipment-gallery > img {
+    height: 450px;
+  }
+
+  .equipment-info h1 {
+    font-size: 34px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .equipment-details {
+    width: 94%;
+
+    padding-top: 30px;
+
+    padding-bottom: 60px;
+  }
+
+  .equipment-gallery > img {
+    height: 300px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+  }
+
+  .thumbnail-row {
+    gap: 8px;
+  }
+
+  .thumbnail-row img {
+    width: 75px;
+
+    height: 70px;
+  }
+
+  .equipment-info h1 {
+    font-size: 29px;
+  }
+
+  .specifications li {
+    font-size: 13px;
+  }
+
+  .rental-options {
+    padding: 18px;
+  }
+}
