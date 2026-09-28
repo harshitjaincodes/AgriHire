@@ -1560,3 +1560,83 @@ label {
     padding: 18px;
   }
 }
+
+/* =========================================================
+   18. BOOKING PAGE
+========================================================= */
+
+.booking-page {
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+
+.booking-page > h1 {
+  margin-bottom: 30px;
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+}
+
+.booking-equipment,
+.booking-form {
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 25px;
+}
+
+.booking-equipment p {
+  color: var(--muted);
+  margin-top: 7px;
+}
+
+.booking-form > label {
+  display: block;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  cursor: pointer;
+}
+
+.booking-form input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+}
+
+.price-summary {
+  padding: 20px;
+
+  margin: 25px 0;
+
+  background: var(--light);
+
+  border-radius: 10px;
+}
+
+.price-summary p {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 8px 0;
+
+  color: var(--text);
+}
