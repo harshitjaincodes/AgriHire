@@ -1,0 +1,465 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Dashboard | AgriHire</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <a href="../index.html" class="logo">
+        🚜 AgriHire
+    </a>
+
+    <strong>Farmer Panel</strong>
+
+    <div class="farmer-header-actions">
+        <a href="profile.html" class="farmer-profile">
+            👨‍🌾 Raj Kumar
+        </a>
+
+        <a href="login.html" class="logout-btn">
+            Logout ↗
+        </a>
+    </div>
+
+</header>
+
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <p class="sidebar-heading">FARMER MENU</p>
+
+        <a href="#farmer-dashboard" class="active">
+            🏠 Dashboard
+        </a>
+
+        <a href="#my-bookings">
+            📅 My Bookings
+        </a>
+
+        <a href="equipment.html">
+            🚜 Browse Equipment
+        </a>
+
+        <a href="#my-requirements">
+            📝 My Requirements
+        </a>
+
+        <a href="profile.html">
+            👤 Profile
+        </a>
+
+        <a href="login.html">
+            ↪ Logout
+        </a>
+
+        <div class="sidebar-note">
+            <span>🌱</span>
+            <strong>Welcome to AgriHire</strong>
+            <p>Find the right equipment for your next farming task.</p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN DASHBOARD -->
+
+    <main class="dashboard-main" id="farmer-dashboard">
+
+        <div class="dashboard-title">
+
+            <div>
+                <p class="admin-eyebrow">FARMER OVERVIEW</p>
+
+                <h1>Welcome back, Raj! 👋</h1>
+
+                <p class="dashboard-subtitle">
+                    Here's what's happening with your rentals.
+                </p>
+            </div>
+
+            <a href="equipment.html" class="btn">
+                Find Equipment
+            </a>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Upcoming Bookings</span>
+                    <span class="stat-icon">📅</span>
+                </div>
+
+                <strong>2</strong>
+                <p>Scheduled rentals</p>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Completed Bookings</span>
+                    <span class="stat-icon">✓</span>
+                </div>
+
+                <strong>5</strong>
+                <p>Completed rentals</p>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Spending</span>
+                    <span class="stat-icon">₹</span>
+                </div>
+
+                <strong>₹45,000</strong>
+                <p>Sample spending figure</p>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Saved Equipment</span>
+                    <span class="stat-icon">♡</span>
+                </div>
+
+                <strong>3</strong>
+                <p>Saved items</p>
+            </div>
+
+        </div>
+
+
+        <!-- UPCOMING BOOKINGS -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Upcoming Bookings</h2>
+
+                    <p>
+                        Check the details of your next equipment rental.
+                    </p>
+                </div>
+
+                <a href="#my-bookings" class="view-link">
+                    View All Bookings →
+                </a>
+
+            </div>
+
+
+            <article class="booking-card">
+
+                <img
+                    src="../images/john-deere.jpeg"
+                    alt="John Deere 5310 tractor"
+                >
+
+                <div class="booking-info">
+
+                    <span class="equipment-category">
+                        TRACTOR
+                    </span>
+
+                    <h3>John Deere 5310</h3>
+
+                    <p>📅 20 May – 29 May</p>
+
+                    <p>10-Day Package</p>
+
+                    <span class="status confirmed">
+                        Confirmed
+                    </span>
+
+                </div>
+
+                <a
+                    href="equipment-details.html"
+                    class="btn booking-details-btn"
+                >
+                    View Details
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- MY BOOKINGS -->
+
+        <section class="dashboard-section" id="my-bookings">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>My Bookings</h2>
+
+                    <p>
+                        Track your equipment rentals and booking statuses.
+                    </p>
+                </div>
+
+                <a href="equipment.html" class="view-link">
+                    + Book Equipment
+                </a>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Equipment</th>
+                            <th>Rental Period</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td class="booking-id">#BK1001</td>
+
+                            <td>John Deere 5310</td>
+
+                            <td>20 May – 29 May</td>
+
+                            <td>₹18,000</td>
+
+                            <td>
+                                <span class="status confirmed">
+                                    Confirmed
+                                </span>
+                            </td>
+
+                            <td>
+                                <a
+                                    href="equipment-details.html"
+                                    class="view-link"
+                                >
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="booking-id">#BK1002</td>
+
+                            <td>Rotavator 6 Feet</td>
+
+                            <td>Dates to be confirmed</td>
+
+                            <td>₹3,500</td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                <a
+                                    href="equipment-details.html"
+                                    class="view-link"
+                                >
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="booking-id">#BK1003</td>
+
+                            <td>Swaraj 744 FE</td>
+
+                            <td>5 Apr – 6 Apr</td>
+
+                            <td>₹2,000</td>
+
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>
+                                <a
+                                    href="equipment-details.html"
+                                    class="view-link"
+                                >
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+        
+<!-- My Requirements Section -->
+<section class="dashboard-section" id="my-requirements">
+    <div class="section-heading">
+        <div>
+            <h2>My Requirements</h2>
+            <p>Manage the equipment you need for your farm.</p>
+        </div>
+
+        <a href="post-requirement.html" class="btn">
+            + Post Requirement
+        </a>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Requirement</th>
+                    <th>Location</th>
+                    <th>Duration</th>
+                    <th>Date Posted</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Example requirement; replace with actual data later -->
+                <tr>
+                    <td>Tractor for ploughing</td>
+                    <td>Gurugram</td>
+                    <td>5 days</td>
+                    <td>10 Oct 2026</td>
+                    <td><span class="status pending">Pending</span></td>
+                </tr>
+
+                <tr>
+                    <td>Rotavator</td>
+                    <td>Manesar</td>
+                    <td>2 days</td>
+                    <td>8 Oct 2026</td>
+                    <td><span class="status confirmed">Fulfilled</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Quick Actions</h2>
+
+                    <p>
+                        What would you like to do today?
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions farmer-quick-actions">
+
+                <a href="equipment.html" class="action-card">
+
+                    <span class="action-icon">🔍</span>
+
+                    <span>
+                        <strong>Find Equipment</strong>
+                        <span>
+                            Browse available tractors and tools.
+                        </span>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+
+                </a>
+
+
+                <a href="post-requirement.html" class="action-card">
+
+                    <span class="action-icon">📝</span>
+
+                    <span>
+                        <strong>Post Requirement</strong>
+                        <span>
+                            Tell equipment owners what you need.
+                        </span>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+
+                </a>
+
+
+                <a href="profile.html" class="action-card">
+
+                    <span class="action-icon">👤</span>
+
+                    <span>
+                        <strong>Manage Profile</strong>
+                        <span>
+                            View and update your personal information.
+                        </span>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+            AgriHire Farmer Panel · Making equipment rental easier
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+```

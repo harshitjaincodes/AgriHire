@@ -1,0 +1,326 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | AgriHire</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+    <a href="../index.html" class="logo">🚜 AgriHire</a>
+    <strong>Admin Panel</strong>
+    <a href="login.html" class="logout-btn">Logout ↗</a>
+</header>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+        <p class="sidebar-heading">ADMIN MENU</p>
+
+        <a href="#admin-dashboard" class="active">📊 Dashboard</a>
+        <a href="#user-analytics">👥 Users</a>
+        <a href="#equipment-analytics">🚜 Equipment</a>
+        <a href="#admin-bookings">📅 Bookings</a>
+        <a href="offers.html">🎁 Offers</a>
+        <a href="#admin-reports">⚠️ Reports</a>
+        <a href="profile.html">⚙️ Settings</a>
+
+        <div class="sidebar-note">
+            <span>🌱</span>
+            <strong>AgriHire Administration</strong>
+            <p>Manage equipment rentals, bookings and platform activity.</p>
+        </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD -->
+
+    <main class="dashboard-main" id="admin-dashboard">
+
+        <div class="dashboard-title">
+            <div>
+                <p class="admin-eyebrow">PLATFORM OVERVIEW</p>
+                <h1>Admin Dashboard</h1>
+                <p class="dashboard-subtitle">
+                    Welcome back! Here's what's happening on AgriHire.
+                </p>
+            </div>
+
+            <span class="admin-date">AgriHire Admin</span>
+        </div>
+
+        <!-- STATISTICS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Users</span>
+                    <span class="stat-icon">👥</span>
+                </div>
+                <strong>1,245</strong>
+                <p>Registered users</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Equipment</span>
+                    <span class="stat-icon">🚜</span>
+                </div>
+                <strong>856</strong>
+                <p>Equipment listings</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Bookings</span>
+                    <span class="stat-icon">📅</span>
+                </div>
+                <strong>2,346</strong>
+                <p>Booking records</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Revenue</span>
+                    <span class="stat-icon">₹</span>
+                </div>
+                <strong>₹12,45,000</strong>
+                <p>Sample revenue figure</p>
+            </div>
+
+        </div>
+
+        <!-- ANALYTICS CHARTS -->
+
+        <section class="dashboard-section analytics-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Platform Analytics</h2>
+                    <p>Sample breakdowns of users and equipment listings.</p>
+                </div>
+                <span class="sample-label">DEMO DATA</span>
+            </div>
+
+            <div class="analytics-grid">
+
+                <!-- USER ANALYTICS -->
+
+                <article class="analytics-card" id="user-analytics">
+
+                    <h3>User Analytics</h3>
+                    <p class="chart-description">
+                        Registered users by account type
+                    </p>
+
+                    <div class="user-chart-area">
+
+                        <div class="user-donut">
+                            <div class="donut-center">
+                                <strong>1,245</strong>
+                                <span>Total Users</span>
+                            </div>
+                        </div>
+
+                        <div class="chart-legend">
+                            <div>
+                                <span class="legend-dot farmers-dot"></span>
+                                <span>Farmers</span>
+                                <strong>720</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot owners-dot"></span>
+                                <span>Equipment Owners</span>
+                                <strong>480</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot admins-dot"></span>
+                                <span>Admins</span>
+                                <strong>45</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- EQUIPMENT ANALYTICS -->
+
+                <article class="analytics-card" id="equipment-analytics">
+
+                    <h3>Equipment Analytics</h3>
+                    <p class="chart-description">
+                        Listings across equipment categories
+                    </p>
+
+                    <div class="equipment-chart">
+
+                        <div class="bar-row">
+                            <span>Tractors</span>
+                            <div class="bar-track">
+                                <div class="bar-fill tractor-bar"></div>
+                            </div>
+                            <strong>340</strong>
+                        </div>
+
+                        <div class="bar-row">
+                            <span>Implements</span>
+                            <div class="bar-track">
+                                <div class="bar-fill implements-bar"></div>
+                            </div>
+                            <strong>230</strong>
+                        </div>
+
+                        <div class="bar-row">
+                            <span>Harvesters</span>
+                            <div class="bar-track">
+                                <div class="bar-fill harvesters-bar"></div>
+                            </div>
+                            <strong>170</strong>
+                        </div>
+
+                        <div class="bar-row">
+                            <span>Other</span>
+                            <div class="bar-track">
+                                <div class="bar-fill other-bar"></div>
+                            </div>
+                            <strong>116</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="chart-total">
+                        Total listings <strong>856</strong>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- RECENT BOOKINGS -->
+
+        <section class="dashboard-section" id="admin-bookings">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Recent Bookings</h2>
+                    <p>Review recent equipment rental bookings.</p>
+                </div>
+
+                <a href="#admin-bookings" class="view-link">
+                    View Bookings ↓
+                </a>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Farmer</th>
+                            <th>Equipment</th>
+                            <th>Duration</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="booking-id">#KS1234</td>
+                            <td>Raj Kumar</td>
+                            <td>John Deere 5310</td>
+                            <td>10 Days</td>
+                            <td>₹18,000</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="booking-id">#KS1235</td>
+                            <td>Amit Singh</td>
+                            <td>Swaraj 744 FE</td>
+                            <td>1 Day</td>
+                            <td>₹2,000</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="booking-id">#KS1236</td>
+                            <td>Vikram Yadav</td>
+                            <td>New Holland 3630</td>
+                            <td>7 Days</td>
+                            <td>₹12,500</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- PENDING ACTIONS -->
+
+        <section class="dashboard-section" id="admin-reports">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Pending Actions</h2>
+                    <p>Items that may need administrator attention.</p>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+
+                <a href="#equipment-analytics" class="action-card">
+                    <span class="action-icon">🚜</span>
+                    <span>
+                        <strong>12</strong>
+                        <span>Equipment awaiting verification</span>
+                    </span>
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="#user-analytics" class="action-card">
+                    <span class="action-icon">⚠️</span>
+                    <span>
+                        <strong>7</strong>
+                        <span>User reports</span>
+                    </span>
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="#admin-bookings" class="action-card">
+                    <span class="action-icon">📅</span>
+                    <span>
+                        <strong>5</strong>
+                        <span>Booking disputes</span>
+                    </span>
+                    <span class="action-arrow">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <footer class="admin-footer">
+            AgriHire Admin Panel · Agricultural equipment rental platform
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+```

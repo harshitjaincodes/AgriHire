@@ -1,0 +1,192 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard | AgriHire</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+    <a href="../index.html" class="logo">🚜 AgriHire</a>
+
+    <strong>Owner Panel</strong>
+
+    <div class="owner-header-actions">
+        <a href="profile.html" class="owner-profile">🚜 Ramesh Yadav</a>
+        <a href="login.html" class="logout-btn">Logout ↗</a>
+    </div>
+</header>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <p class="sidebar-heading">OWNER MENU</p>
+
+        <a href="#owner-dashboard" class="active">🏠 Dashboard</a>
+        <a href="post-equipment.html">➕ Add Equipment</a>
+        <a href="#my-equipment">🚜 My Equipment</a>
+        <a href="#booking-requests">📅 Bookings</a>
+        <a href="#my-equipment">🕒 Availability</a>
+        <a href="#booking-requests">⭐ Reviews</a>
+        <a href="profile.html">👤 My Profile</a>
+
+        <div class="sidebar-note">
+            <span>🌱</span>
+            <strong>Your equipment, your business</strong>
+            <p>Manage your listings and rental requests in one place.</p>
+        </div>
+    </aside>
+
+    <main class="dashboard-main" id="owner-dashboard">
+
+        <div class="dashboard-title">
+            <div>
+                <p class="admin-eyebrow">OWNER OVERVIEW</p>
+                <h1>Owner Dashboard</h1>
+                <p class="dashboard-subtitle">
+                    Manage your equipment and rental bookings.
+                </p>
+            </div>
+            <a href="post-equipment.html" class="btn">+ Add Equipment</a>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Equipment</span>
+                    <span class="stat-icon">🚜</span>
+                </div>
+                <strong>4</strong>
+                <p>Equipment listings</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Bookings</span>
+                    <span class="stat-icon">📅</span>
+                </div>
+                <strong>12</strong>
+                <p>Rental bookings</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Monthly Earnings</span>
+                    <span class="stat-icon">₹</span>
+                </div>
+                <strong>₹38,000</strong>
+                <p>Sample earnings figure</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Average Rating</span>
+                    <span class="stat-icon">⭐</span>
+                </div>
+                <strong>4.8 / 5</strong>
+                <p>Owner rating</p>
+            </div>
+
+        </div>
+
+        <section class="dashboard-section" id="my-equipment">
+
+            <div class="section-heading">
+                <div>
+                    <h2>My Equipment</h2>
+                    <p>Manage your listed equipment and availability.</p>
+                </div>
+                <a href="post-equipment.html" class="view-link">+ Add Equipment</a>
+            </div>
+
+            <div class="equipment-grid owner-equipment-grid">
+
+                <article class="equipment-card owner-equipment-card">
+                    <div class="owner-equipment-image">
+                        <img src="../images/john-deere.jpeg" alt="John Deere 5310">
+                    </div>
+
+                    <div class="owner-equipment-content">
+                        <span class="equipment-category">TRACTOR</span>
+                        <h3>John Deere 5310</h3>
+                        <p class="owner-equipment-price">₹500 <span>/ hour</span></p>
+                        <span class="status available">Available</span>
+                        <a href="equipment-details.html" class="btn full-width">View Details</a>
+                    </div>
+                </article>
+
+                <article class="equipment-card owner-equipment-card">
+                    <div class="owner-equipment-image">
+                        <img src="../images/rotavator-6feet.jpg" alt="Rotavator 6 Feet">
+                    </div>
+
+                    <div class="owner-equipment-content">
+                        <span class="equipment-category">IMPLEMENTS</span>
+                        <h3>Rotavator 6 Feet</h3>
+                        <p class="owner-equipment-price">₹350 <span>/ hour</span></p>
+                        <span class="status booked">Booked</span>
+                        <a href="equipment-details.html" class="btn full-width">View Details</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="dashboard-section" id="booking-requests">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Recent Booking Requests</h2>
+                    <p>Review the latest requests from farmers.</p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Farmer</th>
+                            <th>Equipment</th>
+                            <th>Duration</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Raj Kumar</td>
+                            <td>John Deere 5310</td>
+                            <td>10 Days</td>
+                            <td>₹18,000</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>
+                                <div class="booking-actions">
+                                    <button type="button" class="accept-btn">Accept</button>
+                                    <button type="button" class="reject-btn">Reject</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <footer class="admin-footer">
+            AgriHire Owner Panel · Manage your rental business
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>
+```
