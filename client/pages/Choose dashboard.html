@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Dashboard | AgriHire</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .dashboard-choice {
+            max-width: 850px;
+            margin: 70px auto;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .dashboard-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .dashboard-option {
+            padding: 28px 22px;
+            border: 1px solid #dce7dc;
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        }
+
+        .dashboard-option h2 {
+            margin-bottom: 12px;
+        }
+
+        .dashboard-option p {
+            margin-bottom: 22px;
+        }
+
+        .dashboard-option .btn {
+            display: inline-block;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <main class="dashboard-choice">
+        <h1>Welcome to AgriHire!</h1>
+        <p id="welcomeMessage">Choose how you want to continue.</p>
+
+        <div class="dashboard-options">
+            <section class="dashboard-option">
+                <h2>Farmer Dashboard</h2>
+                <p>Find agricultural equipment to rent for your farming needs.</p>
+                <a href="farmer-dashboard.html" class="btn">Continue as Farmer</a>
+            </section>
+
+            <section class="dashboard-option">
+                <h2>Owner Dashboard</h2>
+                <p>List and manage your agricultural equipment for rent.</p>
+                <a href="owner-dashboard.html" class="btn">Continue as Owner</a>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const roles = JSON.parse(sessionStorage.getItem("userRoles") || "[]");
+
+        // Only users with both roles can use this page.
+        if (!roles.includes("farmer") || !roles.includes("owner")) {
+            if (roles.includes("farmer")) {
+                window.location.replace("farmer-dashboard.html");
+            } else if (roles.includes("owner")) {
+                window.location.replace("owner-dashboard.html");
+            } else {
+                window.location.replace("login.html");
+            }
+        }
+
+        const userName = sessionStorage.getItem("userName");
+        if (userName) {
+            document.getElementById("welcomeMessage").textContent =
+                "Welcome, " + userName + "! Choose which dashboard you want to open.";
+        }
+    </script>
+</body>
+</html>
