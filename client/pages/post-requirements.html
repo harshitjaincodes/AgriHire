@@ -41,152 +41,78 @@
             Tell equipment owners what you need
             and receive suitable rental options.
         </p>
+        <form id="requirementForm">
 
-
-        <form>
-
-
-            <div class="form-group">
-
-                <label>
-                    Farming Activity
-                </label>
-
-                <select>
-
-                    <option>
-                        Select Activity
-                    </option>
-
-                    <option>
-                        Land Preparation
-                    </option>
-
-                    <option>
-                        Sowing
-                    </option>
-
-                    <option>
-                        Irrigation
-                    </option>
-
-                    <option>
-                        Spraying
-                    </option>
-
-                    <option>
-                        Harvesting
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    Equipment Required
-                </label>
-
-                <select>
-
-                    <option>
-                        Select Equipment
-                    </option>
-
-                    <option>Tractor</option>
-                    <option>Harrow</option>
-                    <option>Cultivator</option>
-                    <option>Rotavator</option>
-                    <option>Seed Drill</option>
-                    <option>Plough</option>
-                    <option>Digger</option>
-                    <option>Harvester</option>
-
-                </select>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    Farm Area
-                </label>
-
-                <input
-                    type="number"
-                    placeholder="Area in acres"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    Location
-                </label>
-
-                <input
-                    type="text"
-                    placeholder="Village / City / District"
-                >
-
-            </div>
-
-
-            <div class="form-row">
-
-                <div class="form-group">
-
-                    <label>
-                        Required From
-                    </label>
-
-                    <input type="date">
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Required Until
-                    </label>
-
-                    <input type="date">
-
-                </div>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    Additional Requirements
-                </label>
-
-                <textarea
-                    rows="5"
-                    placeholder="Any specific requirements..."
-                ></textarea>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="btn"
-            >
-                Post Requirement
-            </button>
-
-        </form>
-
+    <div class="form-group">
+        <label for="activity">Farming Activity</label>
+        <select id="activity" name="activity" required>
+            <option value="">Select Activity</option>
+            <option value="Land Preparation">Land Preparation</option>
+            <option value="Sowing">Sowing</option>
+            <option value="Irrigation">Irrigation</option>
+            <option value="Spraying">Spraying</option>
+            <option value="Harvesting">Harvesting</option>
+        </select>
     </div>
+
+    <div class="form-group">
+        <label for="equipmentRequired">Equipment Required</label>
+        <select id="equipmentRequired" name="equipmentRequired" required>
+            <option value="">Select Equipment</option>
+            <option>Tractor</option>
+            <option>Harrow</option>
+            <option>Cultivator</option>
+            <option>Rotavator</option>
+            <option>Seed Drill</option>
+            <option>Plough</option>
+            <option>Digger</option>
+            <option>Harvester</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="farmArea">Farm Area (acres)</label>
+        <input id="farmArea" name="farmArea" type="number"
+               min="0.1" max="100000" step="0.1"
+               placeholder="Area in acres" required>
+    </div>
+
+    <div class="form-group">
+        <label for="requirementLocation">Location</label>
+        <input id="requirementLocation" name="location" type="text"
+               maxlength="150" placeholder="Village / City / District"
+               required>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="requiredFrom">Required From</label>
+            <input id="requiredFrom" name="requiredFrom" type="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="requiredUntil">Required Until</label>
+            <input id="requiredUntil" name="requiredUntil" type="date" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="additionalRequirements">Additional Requirements</label>
+        <textarea id="additionalRequirements" name="additionalRequirements"
+                  rows="5" maxlength="2000"
+                  placeholder="Any specific requirements..."></textarea>
+    </div>
+
+    <p id="requirementMessage" role="status" aria-live="polite"></p>
+
+    <button type="submit" class="btn" id="requirementSubmit">
+        Post Requirement
+    </button>
+
+</form>
+
+<script src="../js/post-requirement.js"></script>
+      
 
 </main>
 
