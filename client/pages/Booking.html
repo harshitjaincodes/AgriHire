@@ -1,200 +1,133 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Book Equipment | AgriHire</title>
 
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
 
 <header class="navbar">
-
-    <a href="../index.html" class="logo">
-        🚜 AgriHire
-    </a>
-
-    <a href="equipment.html">
-        ← Back to Equipment
-    </a>
-
+    <a href="../index.html" class="logo">🚜 AgriHire</a>
+    <a href="equipment.html">← Back to Equipment</a>
 </header>
-
 
 <main class="booking-page">
 
-    <h1>
-        Book Your Equipment
-    </h1>
-
+    <h1>Book Your Equipment</h1>
 
     <div class="booking-layout">
 
-
-        <!-- EQUIPMENT -->
-
+        <!-- EQUIPMENT DETAILS -->
         <section class="booking-equipment">
 
             <img
+                id="equipmentImage"
                 src="../images/john-deere.jpeg"
-                alt="John Deere 5310"
+                alt="Selected agricultural equipment"
             >
 
-            <h2>
-                John Deere 5310
-            </h2>
+            <h2 id="equipmentName">Loading equipment...</h2>
 
-            <p>
-                🚜 Tractor
-            </p>
+            <p id="equipmentCategory">🚜 Equipment</p>
 
-            <p>
-                📍 Gurugram, Haryana
-            </p>
+            <p id="equipmentLocation">📍 Loading location...</p>
 
-            <p>
-                ⭐ 4.8 (36 Reviews)
-            </p>
+            <p>⭐ 4.8 (36 Reviews)</p>
 
         </section>
 
-
         <!-- BOOKING FORM -->
-
         <section class="booking-form">
 
-            <h2>
-                Select Rental Plan
-            </h2>
+            <h2>Select Rental Plan</h2>
 
             <label>
-
-                <input
-                    type="radio"
-                    name="plan"
-                    value="hourly"
-                >
-
-                ₹500/hour
-
+                <input type="radio" name="plan" value="hourly">
+                ₹<span id="hourlyRate">0</span>/hour
             </label>
 
-
             <label>
-
-                <input
-                    type="radio"
-                    name="plan"
-                    value="daily"
-                    checked
-                >
-
-                ₹2,000/day
-
+                <input type="radio" name="plan" value="daily" checked>
+                ₹<span id="dailyRate">0</span>/day
             </label>
 
-
             <label>
-
-                <input
-                    type="radio"
-                    name="plan"
-                    value="weekly"
-                >
-
-                ₹12,500/7 days
-
+                <input type="radio" name="plan" value="weekly">
+                ₹<span id="weeklyRate">0</span>/7 days
             </label>
 
-
             <label>
-
-                <input
-                    type="radio"
-                    name="plan"
-                    value="ten-day"
-                >
-
-                ₹18,000/10 days
+                <input type="radio" name="plan" value="ten-day">
+                ₹<span id="tenDayRate">0</span>/10 days
                 + 10L Diesel Free
-
             </label>
 
-
             <div class="form-group">
-
-                <label>
-                    Start Date
-                </label>
-
+                <label for="startDate">Start Date and Time</label>
                 <input
-                    type="date"
+                    type="datetime-local"
+                    id="startDate"
                     required
                 >
-
             </div>
-
 
             <div class="form-group">
-
-                <label>
-                    End Date
-                </label>
-
+                <label for="endDate">End Date and Time</label>
                 <input
-                    type="date"
+                    type="datetime-local"
+                    id="endDate"
                     required
                 >
-
             </div>
 
-
+            <!-- DYNAMIC PRICE SUMMARY -->
             <div class="price-summary">
 
-                <h3>
-                    Booking Summary
-                </h3>
+                <h3>Booking Summary</h3>
 
                 <p>
                     Rental Price:
-                    <strong>₹2,000</strong>
+                    <strong id="rentalPrice">₹0</strong>
                 </p>
 
                 <p>
                     Security Deposit:
-                    <strong>₹1,000</strong>
+                    <strong id="securityDeposit">₹1,000</strong>
                 </p>
 
                 <hr>
 
                 <h2>
                     Total:
-                    ₹3,000
+                    <span id="totalPrice">₹1,000</span>
                 </h2>
 
             </div>
 
-
             <button
                 class="btn full-width"
-                type="submit"
+                type="button"
+                id="requestBookingBtn"
             >
                 Request Booking
             </button>
+
+            <p id="bookingMessage" role="status" aria-live="polite"></p>
 
         </section>
 
     </div>
 
 </main>
+
+<script src="../js/booking.js"></script>
 
 </body>
 </html>
