@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -120,7 +120,7 @@
 
 <section class="equipment-search-box">
 
-    <form>
+    <form id="equipmentSearchForm">
 
         <div class="search-field">
 
@@ -128,7 +128,7 @@
                 What do you need?
             </label>
 
-            <input
+            <input id="equipmentSearch"
                 type="text"
                 placeholder="Search equipment..."
             >
@@ -142,7 +142,7 @@
                 Location
             </label>
 
-            <input
+            <input id="locationSearch"
                 type="text"
                 placeholder="City, village or district"
             >
@@ -156,7 +156,7 @@
                 Required Date
             </label>
 
-            <input type="date">
+            <input type="date" id="requiredDate">
 
         </div>
 
@@ -194,7 +194,7 @@
             Filters
         </h2>
 
-        <button type="button">
+        <button type="button" id="clearFilters">
             Clear All
         </button>
 
@@ -543,7 +543,7 @@
          EQUIPMENT GRID
     ================================================= -->
 
-    <div class="equipment-grid">
+    <div class="equipment-grid" id="equipmentResultsGrid">
 
 
 
@@ -582,7 +582,7 @@
                 </h3>
 
                 <div class="rating">
-                    ⭐ 4.8
+                    ⭐ 1.8
                     <span>(36 Reviews)</span>
                 </div>
 
@@ -593,7 +593,7 @@
                 </div>
 
                 <p class="location">
-                    📍 Gurugram, Haryana
+                    📍 Kapriwas, Haryana
                 </p>
 
                 <p class="operator">
@@ -2739,7 +2739,7 @@
 
 </footer>
 
-
+<script src="../js/find-equipment.js"></script>
 </body>
 
 </html>
