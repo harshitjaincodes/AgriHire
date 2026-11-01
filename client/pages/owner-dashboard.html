@@ -18,6 +18,12 @@
 
     <div class="owner-header-actions">
         <a href="profile.html" class="owner-profile">🚜 Ramesh Yadav</a>
+        <a href="farmer-dashboard.html"
+   id="switchToFarmer"
+   class="btn"
+   style="display: none;">
+    Switch to Farmer Dashboard
+</a>
         <a href="login.html" class="logout-btn">Logout ↗</a>
     </div>
 </header>
@@ -62,7 +68,7 @@
                     <span>Total Equipment</span>
                     <span class="stat-icon">🚜</span>
                 </div>
-                <strong>4</strong>
+                <strong id="totalEquipmentCount">0</strong>
                 <p>Equipment listings</p>
             </div>
 
@@ -95,48 +101,26 @@
 
         </div>
 
-        <section class="dashboard-section" id="my-equipment">
+      ```html
+  
+<section class="dashboard-section" id="my-equipment">
 
-            <div class="section-heading">
-                <div>
-                    <h2>My Equipment</h2>
-                    <p>Manage your listed equipment and availability.</p>
-                </div>
-                <a href="post-equipment.html" class="view-link">+ Add Equipment</a>
-            </div>
+    <div class="section-heading">
+        <div>
+            <h2>My Equipment</h2>
+            <p>Manage your listed equipment and availability.</p>
+        </div>
+        <a href="post-equipment.html" class="view-link">+ Add Equipment</a>
+    </div>
 
-            <div class="equipment-grid owner-equipment-grid">
+    <div class="equipment-grid owner-equipment-grid" id="ownerEquipmentGrid">
+        <p>Loading your equipment...</p>
+    </div>
 
-                <article class="equipment-card owner-equipment-card">
-                    <div class="owner-equipment-image">
-                        <img src="../images/john-deere.jpeg" alt="John Deere 5310">
-                    </div>
+</section>
 
-                    <div class="owner-equipment-content">
-                        <span class="equipment-category">TRACTOR</span>
-                        <h3>John Deere 5310</h3>
-                        <p class="owner-equipment-price">₹500 <span>/ hour</span></p>
-                        <span class="status available">Available</span>
-                        <a href="equipment-details.html" class="btn full-width">View Details</a>
-                    </div>
-                </article>
 
-                <article class="equipment-card owner-equipment-card">
-                    <div class="owner-equipment-image">
-                        <img src="../images/rotavator-6feet.jpg" alt="Rotavator 6 Feet">
-                    </div>
 
-                    <div class="owner-equipment-content">
-                        <span class="equipment-category">IMPLEMENTS</span>
-                        <h3>Rotavator 6 Feet</h3>
-                        <p class="owner-equipment-price">₹350 <span>/ hour</span></p>
-                        <span class="status booked">Booked</span>
-                        <a href="equipment-details.html" class="btn full-width">View Details</a>
-                    </div>
-                </article>
-
-            </div>
-        </section>
 
         <section class="dashboard-section" id="booking-requests">
 
@@ -160,21 +144,11 @@
                         </tr>
                     </thead>
 
-                    <tbody>
-                        <tr>
-                            <td>Raj Kumar</td>
-                            <td>John Deere 5310</td>
-                            <td>10 Days</td>
-                            <td>₹18,000</td>
-                            <td><span class="status pending">Pending</span></td>
-                            <td>
-                                <div class="booking-actions">
-                                    <button type="button" class="accept-btn">Accept</button>
-                                    <button type="button" class="reject-btn">Reject</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
+                   <tbody id="ownerBookingsTable">
+    <tr>
+        <td colspan="6">Loading booking requests...</td>
+    </tr>
+</tbody>
                 </table>
             </div>
 
@@ -186,7 +160,14 @@
 
     </main>
 </div>
+<script src="../js/owner-dashboard.js"></script>
+<script>
+    const roles = JSON.parse(sessionStorage.getItem("userRoles") || "[]");
 
+    if (roles.includes("farmer") && roles.includes("owner")) {
+        document.getElementById("switchToFarmer").style.display = "inline-block";
+    }
+</script>
 </body>
 </html>
 ```
