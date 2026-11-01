@@ -26,6 +26,13 @@
             👨‍🌾 Raj Kumar
         </a>
 
+         <a href="owner-dashboard.html"
+   id="switchToOwner"
+   class="btn"
+   style="display: none;">
+    Switch to Owner Dashboard
+</a>
+
         <a href="login.html" class="logout-btn">
             Logout ↗
         </a>
@@ -61,6 +68,8 @@
         <a href="profile.html">
             👤 Profile
         </a>
+
+       
 
         <a href="login.html">
             ↪ Logout
@@ -459,7 +468,13 @@
     </main>
 
 </div>
+<script>
+    const roles = JSON.parse(sessionStorage.getItem("userRoles") || "[]");
 
+    if (roles.includes("farmer") && roles.includes("owner")) {
+        document.getElementById("switchToOwner").style.display = "inline-block";
+    }
+</script>
 </body>
 </html>
 ```
