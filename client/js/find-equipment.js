@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-   
+
     // Keep the existing sample cards for now.
     const sampleCards = Array.from(
         grid.querySelectorAll(".equipment-card")
