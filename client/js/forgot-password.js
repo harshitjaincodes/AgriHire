@@ -5,7 +5,6 @@ resetForm.addEventListener("submit", async function (event) {
     const email = document.getElementById("email").value
         .trim()
         .toLowerCase();
-
     const mobile = document.getElementById("mobile").value.trim();
     const newPassword = document.getElementById("newPassword").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
