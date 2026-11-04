@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", loadOwnerEquipment);
 async function loadOwnerEquipment() {
     const grid = document.getElementById("ownerEquipmentGrid");
     const count = document.getElementById("totalEquipmentCount");
-
     try {
         const response = await fetch("/api/equipment");
 
